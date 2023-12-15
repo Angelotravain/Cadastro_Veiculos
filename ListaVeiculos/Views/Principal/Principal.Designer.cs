@@ -44,11 +44,6 @@
         private void InitializeComponent()
         {
             menuStrip1 = new MenuStrip();
-            cadastrosToolStripMenuItem = new ToolStripMenuItem();
-            cadastroDeVeículosToolStripMenuItem = new ToolStripMenuItem();
-            cadastroDeUsuáriosToolStripMenuItem1 = new ToolStripMenuItem();
-            filtrosToolStripMenuItem = new ToolStripMenuItem();
-            filtorDeVeículosToolStripMenuItem = new ToolStripMenuItem();
             configuraçõesToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             sobreToolStripMenuItem = new ToolStripMenuItem();
@@ -59,48 +54,13 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem, filtrosToolStripMenuItem, configuraçõesToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { configuraçõesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(7, 3, 0, 3);
             menuStrip1.Size = new Size(912, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // cadastrosToolStripMenuItem
-            // 
-            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroDeVeículosToolStripMenuItem, cadastroDeUsuáriosToolStripMenuItem1 });
-            cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            cadastrosToolStripMenuItem.Size = new Size(88, 24);
-            cadastrosToolStripMenuItem.Text = "Cadastros";
-            // 
-            // cadastroDeVeículosToolStripMenuItem
-            // 
-            cadastroDeVeículosToolStripMenuItem.Name = "cadastroDeVeículosToolStripMenuItem";
-            cadastroDeVeículosToolStripMenuItem.Size = new Size(234, 26);
-            cadastroDeVeículosToolStripMenuItem.Text = "Cadastro de Veículos ";
-            cadastroDeVeículosToolStripMenuItem.Click += cadastroDeVeículosToolStripMenuItem_Click;
-            // 
-            // cadastroDeUsuáriosToolStripMenuItem1
-            // 
-            cadastroDeUsuáriosToolStripMenuItem1.Name = "cadastroDeUsuáriosToolStripMenuItem1";
-            cadastroDeUsuáriosToolStripMenuItem1.Size = new Size(234, 26);
-            cadastroDeUsuáriosToolStripMenuItem1.Text = "Cadastro de usuários";
-            cadastroDeUsuáriosToolStripMenuItem1.Click += cadastroDeUsuáriosToolStripMenuItem1_Click;
-            // 
-            // filtrosToolStripMenuItem
-            // 
-            filtrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { filtorDeVeículosToolStripMenuItem });
-            filtrosToolStripMenuItem.Name = "filtrosToolStripMenuItem";
-            filtrosToolStripMenuItem.Size = new Size(63, 24);
-            filtrosToolStripMenuItem.Text = "Filtros";
-            // 
-            // filtorDeVeículosToolStripMenuItem
-            // 
-            filtorDeVeículosToolStripMenuItem.Name = "filtorDeVeículosToolStripMenuItem";
-            filtorDeVeículosToolStripMenuItem.Size = new Size(204, 26);
-            filtorDeVeículosToolStripMenuItem.Text = "Filtro de veículos";
-            filtorDeVeículosToolStripMenuItem.Click += filtorDeVeículosToolStripMenuItem_Click;
             // 
             // configuraçõesToolStripMenuItem
             // 
@@ -129,7 +89,7 @@
             painelPrincipal.Location = new Point(0, 30);
             painelPrincipal.Margin = new Padding(3, 4, 3, 4);
             painelPrincipal.Name = "painelPrincipal";
-            painelPrincipal.Size = new Size(912, 559);
+            painelPrincipal.Size = new Size(912, 557);
             painelPrincipal.TabIndex = 2;
             // 
             // Principal
@@ -137,18 +97,19 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(912, 589);
+            ClientSize = new Size(912, 587);
             Controls.Add(painelPrincipal);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 4, 3, 4);
-            MaximumSize = new Size(930, 636);
-            MinimumSize = new Size(930, 636);
+            MaximumSize = new Size(930, 634);
+            MinimumSize = new Size(930, 634);
             Name = "Principal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Principal";
             FormClosing += Form1_FormClosing;
+            Load += Principal_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -158,11 +119,6 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem cadastrosToolStripMenuItem;
-        private ToolStripMenuItem cadastroDeVeículosToolStripMenuItem;
-        private ToolStripMenuItem cadastroDeUsuáriosToolStripMenuItem1;
-        private ToolStripMenuItem filtrosToolStripMenuItem;
-        private ToolStripMenuItem filtorDeVeículosToolStripMenuItem;
         private ToolStripMenuItem configuraçõesToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
         private ToolStripMenuItem sobreToolStripMenuItem;
