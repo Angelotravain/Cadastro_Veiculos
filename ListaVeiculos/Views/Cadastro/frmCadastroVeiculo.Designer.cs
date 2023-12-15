@@ -68,11 +68,12 @@
             panel4.Location = new Point(685, 0);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(229, 302);
+            panel4.Size = new Size(229, 301);
             panel4.TabIndex = 2;
             // 
             // imgVeiculo
             // 
+            imgVeiculo.Cursor = Cursors.Hand;
             imgVeiculo.Image = Properties.Resources.adicionarImagem;
             imgVeiculo.Location = new Point(7, 4);
             imgVeiculo.Margin = new Padding(3, 4, 3, 4);
@@ -190,6 +191,7 @@
             txtMarca.Name = "txtMarca";
             txtMarca.Size = new Size(182, 27);
             txtMarca.TabIndex = 8;
+            txtMarca.Leave += txtMarca_Leave;
             // 
             // label5
             // 
@@ -206,8 +208,9 @@
             txtModelo.Margin = new Padding(3, 4, 3, 4);
             txtModelo.MaxLength = 60;
             txtModelo.Name = "txtModelo";
-            txtModelo.Size = new Size(376, 27);
+            txtModelo.Size = new Size(377, 27);
             txtModelo.TabIndex = 10;
+            txtModelo.KeyDown += txtModelo_KeyDown;
             // 
             // label6
             // 
@@ -240,10 +243,11 @@
             // 
             txtValorFipe.Location = new Point(329, 109);
             txtValorFipe.Margin = new Padding(3, 4, 3, 4);
-            txtValorFipe.MaxLength = 18;
+            txtValorFipe.MaxLength = 16;
             txtValorFipe.Name = "txtValorFipe";
             txtValorFipe.Size = new Size(117, 27);
             txtValorFipe.TabIndex = 14;
+            txtValorFipe.Text = "R$ 0,00";
             // 
             // label8
             // 
@@ -258,10 +262,11 @@
             // 
             txtValorVenda.Location = new Point(117, 144);
             txtValorVenda.Margin = new Padding(3, 4, 3, 4);
-            txtValorVenda.MaxLength = 18;
+            txtValorVenda.MaxLength = 16;
             txtValorVenda.Name = "txtValorVenda";
             txtValorVenda.Size = new Size(212, 27);
             txtValorVenda.TabIndex = 16;
+            txtValorVenda.Text = "R$ 0,00";
             // 
             // label9
             // 
@@ -278,7 +283,7 @@
             txtObservacoes.Margin = new Padding(3, 4, 3, 4);
             txtObservacoes.MaxLength = 300;
             txtObservacoes.Name = "txtObservacoes";
-            txtObservacoes.Size = new Size(448, 111);
+            txtObservacoes.Size = new Size(447, 111);
             txtObservacoes.TabIndex = 17;
             txtObservacoes.Text = "";
             // 
@@ -293,7 +298,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(229, 302);
+            panel1.Size = new Size(229, 301);
             panel1.TabIndex = 0;
             // 
             // btnSair
@@ -302,10 +307,10 @@
             btnSair.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnSair.Image = Properties.Resources.sair;
             btnSair.ImageAlign = ContentAlignment.TopCenter;
-            btnSair.Location = new Point(0, 232);
+            btnSair.Location = new Point(0, 236);
             btnSair.Margin = new Padding(3, 4, 3, 4);
             btnSair.Name = "btnSair";
-            btnSair.Size = new Size(229, 58);
+            btnSair.Size = new Size(229, 59);
             btnSair.TabIndex = 4;
             btnSair.Text = "Sair";
             btnSair.TextAlign = ContentAlignment.BottomCenter;
@@ -318,10 +323,10 @@
             btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancelar.Image = Properties.Resources.cancelar;
             btnCancelar.ImageAlign = ContentAlignment.TopCenter;
-            btnCancelar.Location = new Point(0, 174);
+            btnCancelar.Location = new Point(0, 177);
             btnCancelar.Margin = new Padding(3, 4, 3, 4);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(229, 58);
+            btnCancelar.Size = new Size(229, 59);
             btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextAlign = ContentAlignment.BottomCenter;
@@ -334,10 +339,10 @@
             btnExcluir.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnExcluir.Image = Properties.Resources.excluir;
             btnExcluir.ImageAlign = ContentAlignment.TopCenter;
-            btnExcluir.Location = new Point(0, 116);
+            btnExcluir.Location = new Point(0, 118);
             btnExcluir.Margin = new Padding(3, 4, 3, 4);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(229, 58);
+            btnExcluir.Size = new Size(229, 59);
             btnExcluir.TabIndex = 2;
             btnExcluir.Text = "Excluir";
             btnExcluir.TextAlign = ContentAlignment.BottomCenter;
@@ -350,10 +355,10 @@
             btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnEditar.Image = Properties.Resources.editar;
             btnEditar.ImageAlign = ContentAlignment.TopCenter;
-            btnEditar.Location = new Point(0, 58);
+            btnEditar.Location = new Point(0, 59);
             btnEditar.Margin = new Padding(3, 4, 3, 4);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(229, 58);
+            btnEditar.Size = new Size(229, 59);
             btnEditar.TabIndex = 1;
             btnEditar.Text = "Editar";
             btnEditar.TextAlign = ContentAlignment.BottomCenter;
@@ -369,7 +374,7 @@
             btnSalvar.Location = new Point(0, 0);
             btnSalvar.Margin = new Padding(3, 4, 3, 4);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(229, 58);
+            btnSalvar.Size = new Size(229, 59);
             btnSalvar.TabIndex = 0;
             btnSalvar.Text = "Salvar";
             btnSalvar.TextAlign = ContentAlignment.BottomCenter;
@@ -381,7 +386,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(914, 302);
+            ClientSize = new Size(914, 301);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(panel4);
             Controls.Add(panel1);
@@ -390,6 +395,7 @@
             Name = "frmCadastroVeiculo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de veículos";
+            Load += frmCadastroVeiculo_Load;
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)imgVeiculo).EndInit();
             flowLayoutPanel1.ResumeLayout(false);

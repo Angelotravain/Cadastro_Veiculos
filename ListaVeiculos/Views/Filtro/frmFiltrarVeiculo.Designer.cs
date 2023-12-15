@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button1 = new Button();
             btnNovoVeiculo = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
@@ -44,7 +45,6 @@
             btnPesquisarVeiculo = new Button();
             imgVeiculo = new PictureBox();
             dataGridView1 = new DataGridView();
-            button1 = new Button();
             panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)imgVeiculo).BeginInit();
@@ -62,6 +62,21 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(914, 319);
             panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Dock = DockStyle.Top;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Image = Properties.Resources.sair;
+            button1.ImageAlign = ContentAlignment.TopCenter;
+            button1.Location = new Point(689, 58);
+            button1.Name = "button1";
+            button1.Size = new Size(225, 58);
+            button1.TabIndex = 3;
+            button1.Text = "Sair";
+            button1.TextAlign = ContentAlignment.BottomCenter;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // btnNovoVeiculo
             // 
@@ -199,7 +214,7 @@
             btnPesquisarVeiculo.ImageAlign = ContentAlignment.MiddleRight;
             btnPesquisarVeiculo.Location = new Point(3, 73);
             btnPesquisarVeiculo.Name = "btnPesquisarVeiculo";
-            btnPesquisarVeiculo.Size = new Size(131, 34);
+            btnPesquisarVeiculo.Size = new Size(131, 43);
             btnPesquisarVeiculo.TabIndex = 33;
             btnPesquisarVeiculo.Text = "Pesquisar";
             btnPesquisarVeiculo.UseVisualStyleBackColor = true;
@@ -226,21 +241,6 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(914, 281);
             dataGridView1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            button1.Dock = DockStyle.Top;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Image = Properties.Resources.sair;
-            button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(689, 58);
-            button1.Name = "button1";
-            button1.Size = new Size(225, 58);
-            button1.TabIndex = 3;
-            button1.Text = "Sair";
-            button1.TextAlign = ContentAlignment.BottomCenter;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // frmFiltrarVeiculo
             // 

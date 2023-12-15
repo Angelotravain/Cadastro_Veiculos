@@ -1,6 +1,6 @@
-using ListaVeiculos.Views.Views.Cadastro;
 using ListaVeiculos.Views.Views.Configuracoes;
 using ListaVeiculos.Views.Views.Filtro;
+using ListaVeiculos.Views.Views.Login;
 
 namespace ListaVeiculos
 {
@@ -9,6 +9,8 @@ namespace ListaVeiculos
         public Principal()
         {
             InitializeComponent();
+            var login = new frmLogin();
+            login.ShowDialog();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -22,11 +24,6 @@ namespace ListaVeiculos
                     e.Cancel = true;
                 }
             }
-        }
-
-        private void filtorDeVeículosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AbrirFormNoPanel<frmFiltrarVeiculo>();
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,14 +42,9 @@ namespace ListaVeiculos
             }
         }
 
-        private void cadastroDeVeículosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Principal_Load(object sender, EventArgs e)
         {
-            AbrirFormNoPanel<frmFiltrarVeiculo>();
-        }
 
-        private void cadastroDeUsuáriosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            AbrirFormNoPanel<frmCadastroUsuario>();
         }
     }
 }

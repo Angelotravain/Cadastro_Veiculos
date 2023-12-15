@@ -1,0 +1,5 @@
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ListaVeiculos.Business.csproj.AssemblyReference.cache
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ListaVeiculos.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ListaVeiculos.Business.AssemblyInfoInputs.cache
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ListaVeiculos.Business.AssemblyInfo.cs
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ListaVeiculos.Business.csproj.CoreCompileInputs.cache
