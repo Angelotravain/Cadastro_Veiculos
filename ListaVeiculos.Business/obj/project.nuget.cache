@@ -1,17 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "rwCSjLwzLPXbIUdITKi+Re4kwK3APgPXfC/MqUfQ+9UlH3w77HmbQW5kOsUd5EqlMsNqSv/TVciHxioN6wfMMA==",
+  "dgSpecHash": "qwTmSSfyk9k/mRCUEh1GzLw2K5h2jq/ubbKS9bOG5zO3YDNr+DwYVhx9qn46SJPgQJ0cRWL0Q5YzfAC+T1Hftw==",
   "success": true,
   "projectFilePath": "D:\\Teste\\Lista de Veículos\\ListaVeiculos.Business\\ListaVeiculos.Business.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Angelo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\Angelo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Angelo\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Angelo\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\Angelo\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",
     "C:\\Users\\Angelo\\.nuget\\packages\\k4os.compression.lz4.streams\\1.3.5\\k4os.compression.lz4.streams.1.3.5.nupkg.sha512",
     "C:\\Users\\Angelo\\.nuget\\packages\\k4os.hash.xxhash\\1.0.8\\k4os.hash.xxhash.1.0.8.nupkg.sha512",
-    "C:\\Users\\Angelo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Angelo\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
     "C:\\Users\\Angelo\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.2\\microsoft.entityframeworkcore.abstractions.7.0.2.nupkg.sha512",
     "C:\\Users\\Angelo\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.2\\microsoft.entityframeworkcore.analyzers.7.0.2.nupkg.sha512",

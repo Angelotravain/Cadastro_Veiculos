@@ -1,7 +1,4 @@
-﻿using System.Globalization;
-using System.Text.RegularExpressions;
-
-namespace ListaVeiculos.Views.Views.Cadastro.Metods
+﻿namespace ListaVeiculos.Views.Views.Cadastro.Metods
 {
     internal static class frmVeiculos
     {
@@ -39,9 +36,6 @@ namespace ListaVeiculos.Views.Views.Cadastro.Metods
         public static bool ValidarChassi(string numeroChassi)
         {
             if (numeroChassi.Length != 17)
-                return true;
-
-            if (!Regex.IsMatch(numeroChassi.Substring(0, 3), "^[A-Za-z]*$"))
                 return true;
 
             return false;

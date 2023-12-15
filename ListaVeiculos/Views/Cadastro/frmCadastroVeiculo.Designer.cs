@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             panel4 = new Panel();
-            imgVeiculo = new PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             dtAnoDeFabricacao = new DateTimePicker();
@@ -55,34 +54,17 @@
             btnExcluir = new Button();
             btnEditar = new Button();
             btnSalvar = new Button();
-            panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)imgVeiculo).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel4
             // 
-            panel4.Controls.Add(imgVeiculo);
             panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(685, 0);
-            panel4.Margin = new Padding(3, 4, 3, 4);
+            panel4.Location = new Point(600, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(229, 301);
+            panel4.Size = new Size(200, 246);
             panel4.TabIndex = 2;
-            // 
-            // imgVeiculo
-            // 
-            imgVeiculo.Cursor = Cursors.Hand;
-            imgVeiculo.Image = Properties.Resources.adicionarImagem;
-            imgVeiculo.Location = new Point(7, 4);
-            imgVeiculo.Margin = new Padding(3, 4, 3, 4);
-            imgVeiculo.Name = "imgVeiculo";
-            imgVeiculo.Size = new Size(142, 147);
-            imgVeiculo.SizeMode = PictureBoxSizeMode.StretchImage;
-            imgVeiculo.TabIndex = 0;
-            imgVeiculo.TabStop = false;
-            imgVeiculo.Click += imgVeiculo_Click;
             // 
             // flowLayoutPanel1
             // 
@@ -106,12 +88,11 @@
             flowLayoutPanel1.Controls.Add(label9);
             flowLayoutPanel1.Controls.Add(txtObservacoes);
             flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.Location = new Point(229, 0);
-            flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
-            flowLayoutPanel1.MaximumSize = new Size(457, 600);
-            flowLayoutPanel1.MinimumSize = new Size(457, 600);
+            flowLayoutPanel1.Location = new Point(200, 0);
+            flowLayoutPanel1.MaximumSize = new Size(400, 450);
+            flowLayoutPanel1.MinimumSize = new Size(400, 450);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(457, 600);
+            flowLayoutPanel1.Size = new Size(400, 450);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // label1
@@ -119,7 +100,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(131, 20);
+            label1.Size = new Size(103, 15);
             label1.TabIndex = 0;
             label1.Text = "Ano de fabricação";
             // 
@@ -127,20 +108,19 @@
             // 
             dtAnoDeFabricacao.CustomFormat = "yyyy";
             dtAnoDeFabricacao.Format = DateTimePickerFormat.Custom;
-            dtAnoDeFabricacao.Location = new Point(140, 4);
-            dtAnoDeFabricacao.Margin = new Padding(3, 4, 3, 4);
+            dtAnoDeFabricacao.Location = new Point(112, 3);
             dtAnoDeFabricacao.Name = "dtAnoDeFabricacao";
             dtAnoDeFabricacao.ShowUpDown = true;
-            dtAnoDeFabricacao.Size = new Size(105, 27);
+            dtAnoDeFabricacao.Size = new Size(92, 23);
             dtAnoDeFabricacao.TabIndex = 2;
             dtAnoDeFabricacao.Value = new DateTime(2023, 12, 12, 0, 0, 0, 0);
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(251, 0);
+            label2.Location = new Point(210, 0);
             label2.Name = "label2";
-            label2.Size = new Size(92, 20);
+            label2.Size = new Size(73, 15);
             label2.TabIndex = 3;
             label2.Text = "Ano modelo";
             // 
@@ -148,142 +128,134 @@
             // 
             dtAnoModelo.CustomFormat = "yyyy";
             dtAnoModelo.Format = DateTimePickerFormat.Custom;
-            dtAnoModelo.Location = new Point(349, 4);
-            dtAnoModelo.Margin = new Padding(3, 4, 3, 4);
+            dtAnoModelo.Location = new Point(289, 3);
             dtAnoModelo.Name = "dtAnoModelo";
             dtAnoModelo.ShowUpDown = true;
-            dtAnoModelo.Size = new Size(97, 27);
+            dtAnoModelo.Size = new Size(85, 23);
             dtAnoModelo.TabIndex = 4;
             dtAnoModelo.Value = new DateTime(2023, 12, 12, 0, 0, 0, 0);
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(3, 35);
+            label3.Location = new Point(3, 29);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(41, 15);
             label3.TabIndex = 5;
             label3.Text = "Chassi";
             // 
             // txtChassi
             // 
-            txtChassi.Location = new Point(59, 39);
-            txtChassi.Margin = new Padding(3, 4, 3, 4);
+            txtChassi.Location = new Point(50, 32);
             txtChassi.MaxLength = 18;
             txtChassi.Name = "txtChassi";
-            txtChassi.Size = new Size(143, 27);
+            txtChassi.Size = new Size(126, 23);
             txtChassi.TabIndex = 6;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(208, 35);
+            label4.Location = new Point(182, 29);
             label4.Name = "label4";
-            label4.Size = new Size(50, 20);
+            label4.Size = new Size(40, 15);
             label4.TabIndex = 7;
             label4.Text = "Marca";
             // 
             // txtMarca
             // 
-            txtMarca.Location = new Point(264, 39);
-            txtMarca.Margin = new Padding(3, 4, 3, 4);
+            txtMarca.Location = new Point(228, 32);
             txtMarca.MaxLength = 40;
             txtMarca.Name = "txtMarca";
-            txtMarca.Size = new Size(182, 27);
+            txtMarca.Size = new Size(160, 23);
             txtMarca.TabIndex = 8;
             txtMarca.Leave += txtMarca_Leave;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(3, 70);
+            label5.Location = new Point(3, 58);
             label5.Name = "label5";
-            label5.Size = new Size(61, 20);
+            label5.Size = new Size(48, 15);
             label5.TabIndex = 9;
             label5.Text = "Modelo";
             // 
             // txtModelo
             // 
-            txtModelo.Location = new Point(70, 74);
-            txtModelo.Margin = new Padding(3, 4, 3, 4);
+            txtModelo.Location = new Point(57, 61);
             txtModelo.MaxLength = 60;
             txtModelo.Name = "txtModelo";
-            txtModelo.Size = new Size(377, 27);
+            txtModelo.Size = new Size(330, 23);
             txtModelo.TabIndex = 10;
             txtModelo.KeyDown += txtModelo_KeyDown;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(3, 105);
+            label6.Location = new Point(3, 87);
             label6.Name = "label6";
-            label6.Size = new Size(44, 20);
+            label6.Size = new Size(35, 15);
             label6.TabIndex = 11;
             label6.Text = "Placa";
             // 
             // txtPlaca
             // 
-            txtPlaca.Location = new Point(53, 109);
-            txtPlaca.Margin = new Padding(3, 4, 3, 4);
+            txtPlaca.Location = new Point(44, 90);
             txtPlaca.MaxLength = 18;
             txtPlaca.Name = "txtPlaca";
-            txtPlaca.Size = new Size(123, 27);
+            txtPlaca.Size = new Size(108, 23);
             txtPlaca.TabIndex = 12;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(182, 105);
+            label7.Location = new Point(158, 87);
             label7.Name = "label7";
-            label7.Size = new Size(141, 20);
+            label7.Size = new Size(109, 15);
             label7.TabIndex = 13;
             label7.Text = "Valor da tabela FIPE";
             // 
             // txtValorFipe
             // 
-            txtValorFipe.Location = new Point(329, 109);
-            txtValorFipe.Margin = new Padding(3, 4, 3, 4);
+            txtValorFipe.Location = new Point(273, 90);
             txtValorFipe.MaxLength = 16;
             txtValorFipe.Name = "txtValorFipe";
-            txtValorFipe.Size = new Size(117, 27);
+            txtValorFipe.Size = new Size(103, 23);
             txtValorFipe.TabIndex = 14;
             txtValorFipe.Text = "R$ 0,00";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(3, 140);
+            label8.Location = new Point(3, 116);
             label8.Name = "label8";
-            label8.Size = new Size(108, 20);
+            label8.Size = new Size(84, 15);
             label8.TabIndex = 15;
             label8.Text = "Valor de venda";
             // 
             // txtValorVenda
             // 
-            txtValorVenda.Location = new Point(117, 144);
-            txtValorVenda.Margin = new Padding(3, 4, 3, 4);
+            txtValorVenda.Location = new Point(93, 119);
             txtValorVenda.MaxLength = 16;
             txtValorVenda.Name = "txtValorVenda";
-            txtValorVenda.Size = new Size(212, 27);
+            txtValorVenda.Size = new Size(186, 23);
             txtValorVenda.TabIndex = 16;
             txtValorVenda.Text = "R$ 0,00";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(335, 140);
+            label9.Location = new Point(285, 116);
             label9.Name = "label9";
-            label9.Size = new Size(93, 20);
+            label9.Size = new Size(74, 15);
             label9.TabIndex = 18;
             label9.Text = "Observações";
             // 
             // txtObservacoes
             // 
-            txtObservacoes.Location = new Point(3, 179);
-            txtObservacoes.Margin = new Padding(3, 4, 3, 4);
+            txtObservacoes.Location = new Point(3, 148);
             txtObservacoes.MaxLength = 300;
             txtObservacoes.Name = "txtObservacoes";
-            txtObservacoes.Size = new Size(447, 111);
+            txtObservacoes.Size = new Size(392, 84);
             txtObservacoes.TabIndex = 17;
             txtObservacoes.Text = "";
             // 
@@ -296,9 +268,8 @@
             panel1.Controls.Add(btnSalvar);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(229, 301);
+            panel1.Size = new Size(200, 246);
             panel1.TabIndex = 0;
             // 
             // btnSair
@@ -307,10 +278,9 @@
             btnSair.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnSair.Image = Properties.Resources.sair;
             btnSair.ImageAlign = ContentAlignment.TopCenter;
-            btnSair.Location = new Point(0, 236);
-            btnSair.Margin = new Padding(3, 4, 3, 4);
+            btnSair.Location = new Point(0, 176);
             btnSair.Name = "btnSair";
-            btnSair.Size = new Size(229, 59);
+            btnSair.Size = new Size(200, 44);
             btnSair.TabIndex = 4;
             btnSair.Text = "Sair";
             btnSair.TextAlign = ContentAlignment.BottomCenter;
@@ -323,10 +293,9 @@
             btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancelar.Image = Properties.Resources.cancelar;
             btnCancelar.ImageAlign = ContentAlignment.TopCenter;
-            btnCancelar.Location = new Point(0, 177);
-            btnCancelar.Margin = new Padding(3, 4, 3, 4);
+            btnCancelar.Location = new Point(0, 132);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(229, 59);
+            btnCancelar.Size = new Size(200, 44);
             btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextAlign = ContentAlignment.BottomCenter;
@@ -339,10 +308,9 @@
             btnExcluir.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnExcluir.Image = Properties.Resources.excluir;
             btnExcluir.ImageAlign = ContentAlignment.TopCenter;
-            btnExcluir.Location = new Point(0, 118);
-            btnExcluir.Margin = new Padding(3, 4, 3, 4);
+            btnExcluir.Location = new Point(0, 88);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(229, 59);
+            btnExcluir.Size = new Size(200, 44);
             btnExcluir.TabIndex = 2;
             btnExcluir.Text = "Excluir";
             btnExcluir.TextAlign = ContentAlignment.BottomCenter;
@@ -355,10 +323,9 @@
             btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnEditar.Image = Properties.Resources.editar;
             btnEditar.ImageAlign = ContentAlignment.TopCenter;
-            btnEditar.Location = new Point(0, 59);
-            btnEditar.Margin = new Padding(3, 4, 3, 4);
+            btnEditar.Location = new Point(0, 44);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(229, 59);
+            btnEditar.Size = new Size(200, 44);
             btnEditar.TabIndex = 1;
             btnEditar.Text = "Editar";
             btnEditar.TextAlign = ContentAlignment.BottomCenter;
@@ -372,9 +339,8 @@
             btnSalvar.Image = Properties.Resources.salvar;
             btnSalvar.ImageAlign = ContentAlignment.TopCenter;
             btnSalvar.Location = new Point(0, 0);
-            btnSalvar.Margin = new Padding(3, 4, 3, 4);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(229, 59);
+            btnSalvar.Size = new Size(200, 44);
             btnSalvar.TabIndex = 0;
             btnSalvar.Text = "Salvar";
             btnSalvar.TextAlign = ContentAlignment.BottomCenter;
@@ -383,21 +349,18 @@
             // 
             // frmCadastroVeiculo
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(914, 301);
+            ClientSize = new Size(800, 246);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(panel4);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmCadastroVeiculo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de veículos";
             Load += frmCadastroVeiculo_Load;
-            panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)imgVeiculo).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             panel1.ResumeLayout(false);
@@ -427,7 +390,6 @@
         private TextBox txtValorVenda;
         private Label label9;
         private RichTextBox txtObservacoes;
-        private PictureBox imgVeiculo;
         private Button btnSalvar;
         private Button btnSair;
         private Button btnCancelar;

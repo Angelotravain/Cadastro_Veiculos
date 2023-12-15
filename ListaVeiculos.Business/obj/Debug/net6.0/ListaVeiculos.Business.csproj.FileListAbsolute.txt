@@ -3,3 +3,15 @@ D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ListaVeiculo
 D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ListaVeiculos.Business.AssemblyInfoInputs.cache
 D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ListaVeiculos.Business.AssemblyInfo.cs
 D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ListaVeiculos.Business.csproj.CoreCompileInputs.cache
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\bin\Debug\net6.0\ListaVeiculos.Business.deps.json
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\bin\Debug\net6.0\ListaVeiculos.Business.dll
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\bin\Debug\net6.0\ListaVeiculos.Business.pdb
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\bin\Debug\net6.0\ListaVeiculos.Data.dll
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\bin\Debug\net6.0\ListaVeiculos.Models.dll
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\bin\Debug\net6.0\ListaVeiculos.Data.pdb
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\bin\Debug\net6.0\ListaVeiculos.Models.pdb
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ListaVeiculos.Business.csproj.CopyComplete
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ListaVeiculos.Business.dll
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\refint\ListaVeiculos.Business.dll
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ListaVeiculos.Business.pdb
+D:\Teste\Lista de Veículos\ListaVeiculos.Business\obj\Debug\net6.0\ref\ListaVeiculos.Business.dll

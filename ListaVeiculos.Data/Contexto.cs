@@ -15,7 +15,6 @@ namespace ListaVeiculos.Data
         public Contexto(DbContextOptions<Contexto> options) : base(options) { }
 
         public DbSet<Veiculo> Veiculos { get; set; }
-        public DbSet<RegistroLogin> RegistroUsuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) { }
 
