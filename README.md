@@ -56,5 +56,5 @@ O projeto será avaliado com base nos seguintes critérios:
 - Boas práticas de programação
 - Tratamento de erros e exceções
 
-## Entrega
-Você deve publicar o desafio em um repositório público do GitHub e enviar o link para o seguinte WhatsApp: 49 9 8890-9021.
+## Banco de dados
+Upload de banco de dados em anexo, incluido pela Tarefa/003
