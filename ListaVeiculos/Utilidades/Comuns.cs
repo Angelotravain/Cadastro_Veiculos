@@ -1,30 +1,25 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ListaVeiculos.Views.Utils
 {
     public static class Comuns
     {
-        public static void ConfigureAutoComplete<T>(TextBox textBox, List<T> listaDados, string parametroInicial = "")
+        public static void ConfigureAutoComplete<T>(TextBox textBox, List<T> listaDados)
         {
             AutoCompleteStringCollection autoCompleteCollection = new AutoCompleteStringCollection();
 
             foreach (var item in listaDados)
             {
-                var propriedadeNome = item.GetType().GetProperty("Nome");
-                if (propriedadeNome != null)
+                var propertyName = item.GetType().GetProperty("Nome");
+                if (propertyName != null)
                 {
-                    var valorNome = propriedadeNome.GetValue(item)?.ToString();
-                    if (!string.IsNullOrEmpty(valorNome))
-                        autoCompleteCollection.Add(valorNome);
+                    var valueName = propertyName.GetValue(item)?.ToString();
+                    if (!string.IsNullOrEmpty(valueName))
+                        autoCompleteCollection.Add(valueName);
                 }
             }
 
-            textBox.Text = parametroInicial;
+            textBox.Text = string.Empty;
             textBox.AutoCompleteCustomSource = autoCompleteCollection;
             textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -39,8 +34,8 @@ namespace ListaVeiculos.Views.Utils
 
                 if (response.IsSuccessStatusCode)
                 {
-                    string resposta = await response.Content.ReadAsStringAsync();
-                    List<T> dadosRecuperados = JsonConvert.DeserializeObject<List<T>>(resposta);
+                    string responseBody = await response.Content.ReadAsStringAsync();
+                    List<T> dadosRecuperados = JsonConvert.DeserializeObject<List<T>>(responseBody);
                     return dadosRecuperados;
                 }
             }
@@ -55,33 +50,30 @@ namespace ListaVeiculos.Views.Utils
 
                 if (response.IsSuccessStatusCode)
                 {
-                    string resposta = await response.Content.ReadAsStringAsync();
-                    T dadosRecuperados = JsonConvert.DeserializeObject<T>(resposta);
+                    string responseBody = await response.Content.ReadAsStringAsync();
+                    T dadosRecuperados = JsonConvert.DeserializeObject<T>(responseBody);
                     return dadosRecuperados;
                 }
             }
 
             return default(T);
         }
-        public static void AbrirImagem(PictureBox pictureBox)
+        public static void ajustarGrid(DataGridView grid)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Filter = "Arquivos de imagem (*.png;*.jpg;*.jpeg)|*.png;*.jpg;*.jpeg|Todos os arquivos (*.*)|*.*";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    try
-                    {
-                        Image imagem = Image.FromFile(openFileDialog.FileName);
-                        pictureBox.Image = imagem;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Não foi possível abrir o arquivo. Erro: " + ex.Message);
-                    }
-                }
-            }
+            grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grid.Dock = DockStyle.Fill;
+            grid.RowHeadersVisible = false;
+            grid.AllowUserToAddRows = false;
+            grid.AllowUserToDeleteRows = false;
+            grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            grid.MultiSelect = false;
+            grid.ReadOnly = true;
+            grid.DefaultCellStyle.SelectionBackColor = SystemColors.GradientActiveCaption;
+            grid.DefaultCellStyle.SelectionForeColor = SystemColors.ControlText;
+            grid.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            grid.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            grid.BackgroundColor = SystemColors.Window;
+            grid.BorderStyle = BorderStyle.None;
         }
     }
 }

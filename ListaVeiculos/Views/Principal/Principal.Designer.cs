@@ -19,21 +19,6 @@
             }
             base.Dispose(disposing);
         }
-        private void AbrirFormNoPanel<Forms>() where Forms : Form, new()
-        {
-            Form formulario;
-            formulario = painelPrincipal.Controls.OfType<Forms>().FirstOrDefault();
-            formulario = new Forms();
-            formulario.TopLevel = false;
-            formulario.FormBorderStyle = FormBorderStyle.None;
-            formulario.WindowState = FormWindowState.Maximized;
-            formulario.StartPosition = FormStartPosition.CenterScreen;
-            formulario.Dock = DockStyle.None;
-            painelPrincipal.Controls.Add(formulario);
-            painelPrincipal.Tag = formulario;
-            formulario.Show();
-            formulario.BringToFront();
-        }
 
         #region Windows Form Designer generated code
 
@@ -43,85 +28,132 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
-            configuraçõesToolStripMenuItem = new ToolStripMenuItem();
-            sairToolStripMenuItem = new ToolStripMenuItem();
-            sobreToolStripMenuItem = new ToolStripMenuItem();
             painelPrincipal = new Panel();
-            menuStrip1.SuspendLayout();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            pcSair = new PictureBox();
+            pcSobre = new PictureBox();
+            pcVeiculos = new PictureBox();
+            painelPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pcSair).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcSobre).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcVeiculos).BeginInit();
             SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { configuraçõesToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 3, 0, 3);
-            menuStrip1.Size = new Size(912, 30);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // configuraçõesToolStripMenuItem
-            // 
-            configuraçõesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { sairToolStripMenuItem, sobreToolStripMenuItem });
-            configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
-            configuraçõesToolStripMenuItem.Size = new Size(118, 24);
-            configuraçõesToolStripMenuItem.Text = "Configurações";
-            // 
-            // sairToolStripMenuItem
-            // 
-            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(131, 26);
-            sairToolStripMenuItem.Text = "Sair";
-            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
-            // 
-            // sobreToolStripMenuItem
-            // 
-            sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            sobreToolStripMenuItem.Size = new Size(131, 26);
-            sobreToolStripMenuItem.Text = "Sobre";
-            sobreToolStripMenuItem.Click += sobreToolStripMenuItem_Click;
             // 
             // painelPrincipal
             // 
+            painelPrincipal.Controls.Add(label3);
+            painelPrincipal.Controls.Add(label2);
+            painelPrincipal.Controls.Add(label1);
+            painelPrincipal.Controls.Add(pcSair);
+            painelPrincipal.Controls.Add(pcSobre);
+            painelPrincipal.Controls.Add(pcVeiculos);
             painelPrincipal.Dock = DockStyle.Fill;
-            painelPrincipal.Location = new Point(0, 30);
-            painelPrincipal.Margin = new Padding(3, 4, 3, 4);
+            painelPrincipal.Location = new Point(0, 0);
             painelPrincipal.Name = "painelPrincipal";
-            painelPrincipal.Size = new Size(912, 557);
+            painelPrincipal.Size = new Size(800, 446);
             painelPrincipal.TabIndex = 2;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(85, 256);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 25);
+            label3.TabIndex = 5;
+            label3.Text = "Veículos";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(639, 256);
+            label2.Name = "label2";
+            label2.Size = new Size(46, 25);
+            label2.TabIndex = 4;
+            label2.Text = "Sair";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(361, 256);
+            label1.Name = "label1";
+            label1.Size = new Size(65, 25);
+            label1.TabIndex = 3;
+            label1.Text = "Sobre";
+            // 
+            // pcSair
+            // 
+            pcSair.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pcSair.Cursor = Cursors.Hand;
+            pcSair.Image = Views.Properties.Resources.sair1;
+            pcSair.Location = new Point(595, 129);
+            pcSair.Name = "pcSair";
+            pcSair.Size = new Size(131, 124);
+            pcSair.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcSair.TabIndex = 2;
+            pcSair.TabStop = false;
+            pcSair.Click += pcSair_Click;
+            // 
+            // pcSobre
+            // 
+            pcSobre.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pcSobre.Cursor = Cursors.Hand;
+            pcSobre.Image = Views.Properties.Resources.soobre;
+            pcSobre.Location = new Point(328, 129);
+            pcSobre.Name = "pcSobre";
+            pcSobre.Size = new Size(131, 124);
+            pcSobre.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcSobre.TabIndex = 1;
+            pcSobre.TabStop = false;
+            pcSobre.Click += pcSobre_Click;
+            // 
+            // pcVeiculos
+            // 
+            pcVeiculos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pcVeiculos.Cursor = Cursors.Hand;
+            pcVeiculos.Image = Views.Properties.Resources.veiculo1;
+            pcVeiculos.Location = new Point(61, 129);
+            pcVeiculos.Name = "pcVeiculos";
+            pcVeiculos.Size = new Size(131, 124);
+            pcVeiculos.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcVeiculos.TabIndex = 0;
+            pcVeiculos.TabStop = false;
+            pcVeiculos.Click += pcVeiculos_Click;
             // 
             // Principal
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(912, 587);
+            ClientSize = new Size(800, 446);
             Controls.Add(painelPrincipal);
-            Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 4, 3, 4);
-            MaximumSize = new Size(930, 634);
-            MinimumSize = new Size(930, 634);
+            MaximumSize = new Size(816, 485);
+            MinimumSize = new Size(816, 485);
             Name = "Principal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Principal";
             FormClosing += Form1_FormClosing;
             Load += Principal_Load;
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            painelPrincipal.ResumeLayout(false);
+            painelPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pcSair).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcSobre).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcVeiculos).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem configuraçõesToolStripMenuItem;
-        private ToolStripMenuItem sairToolStripMenuItem;
-        private ToolStripMenuItem sobreToolStripMenuItem;
         private Panel painelPrincipal;
+        private PictureBox pcVeiculos;
+        private PictureBox pcSair;
+        private PictureBox pcSobre;
+        private Label label3;
+        private Label label2;
+        private Label label1;
     }
 }

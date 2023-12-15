@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ListaVeiculosData.Crud.Interface
+﻿namespace ListaVeiculosData.Crud.Interface
 {
     public interface ICrudGenerico
     {

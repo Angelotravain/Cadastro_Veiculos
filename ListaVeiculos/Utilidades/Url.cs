@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ListaVeiculos.Views.Utils
+﻿namespace ListaVeiculos.Views.Utils
 {
     public static class Url
     {
@@ -12,6 +6,6 @@ namespace ListaVeiculos.Views.Utils
 
         public static string UrlModeloVeiculo(string codigoMarca) { return $"https://parallelum.com.br/fipe/api/v1/carros/marcas/{codigoMarca}/modelos"; }
 
-        public static string UrlLogin() { return ""; }
+        public static string UrlLogin() { return "https://test-api-y04b.onrender.com/signIn"; }
     }
 }

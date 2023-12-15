@@ -42,13 +42,13 @@
             txtModelo = new TextBox();
             label6 = new Label();
             txtPlaca = new TextBox();
+            lbMarca = new Label();
+            txtMarca = new TextBox();
             btnPesquisarVeiculo = new Button();
-            imgVeiculo = new PictureBox();
-            dataGridView1 = new DataGridView();
+            gridVeiculo = new DataGridView();
             panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)imgVeiculo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gridVeiculo).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -56,11 +56,11 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(btnNovoVeiculo);
             panel1.Controls.Add(flowLayoutPanel1);
-            panel1.Controls.Add(imgVeiculo);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(914, 319);
+            panel1.Size = new Size(800, 239);
             panel1.TabIndex = 0;
             // 
             // button1
@@ -69,9 +69,10 @@
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Image = Properties.Resources.sair;
             button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(689, 58);
+            button1.Location = new Point(603, 44);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(225, 58);
+            button1.Size = new Size(197, 44);
             button1.TabIndex = 3;
             button1.Text = "Sair";
             button1.TextAlign = ContentAlignment.BottomCenter;
@@ -84,9 +85,10 @@
             btnNovoVeiculo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnNovoVeiculo.Image = Properties.Resources.novo;
             btnNovoVeiculo.ImageAlign = ContentAlignment.TopCenter;
-            btnNovoVeiculo.Location = new Point(689, 0);
+            btnNovoVeiculo.Location = new Point(603, 0);
+            btnNovoVeiculo.Margin = new Padding(3, 2, 3, 2);
             btnNovoVeiculo.Name = "btnNovoVeiculo";
-            btnNovoVeiculo.Size = new Size(225, 58);
+            btnNovoVeiculo.Size = new Size(197, 44);
             btnNovoVeiculo.TabIndex = 1;
             btnNovoVeiculo.Text = "Novo";
             btnNovoVeiculo.TextAlign = ContentAlignment.BottomCenter;
@@ -105,11 +107,14 @@
             flowLayoutPanel1.Controls.Add(txtModelo);
             flowLayoutPanel1.Controls.Add(label6);
             flowLayoutPanel1.Controls.Add(txtPlaca);
+            flowLayoutPanel1.Controls.Add(lbMarca);
+            flowLayoutPanel1.Controls.Add(txtMarca);
             flowLayoutPanel1.Controls.Add(btnPesquisarVeiculo);
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(689, 319);
+            flowLayoutPanel1.Size = new Size(603, 239);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -117,7 +122,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(131, 20);
+            label1.Size = new Size(103, 15);
             label1.TabIndex = 23;
             label1.Text = "Ano de fabricação";
             // 
@@ -125,20 +130,19 @@
             // 
             dtAnoDeFabricacao.CustomFormat = "yyyy";
             dtAnoDeFabricacao.Format = DateTimePickerFormat.Custom;
-            dtAnoDeFabricacao.Location = new Point(140, 4);
-            dtAnoDeFabricacao.Margin = new Padding(3, 4, 3, 4);
+            dtAnoDeFabricacao.Location = new Point(112, 3);
             dtAnoDeFabricacao.Name = "dtAnoDeFabricacao";
             dtAnoDeFabricacao.ShowUpDown = true;
-            dtAnoDeFabricacao.Size = new Size(105, 27);
+            dtAnoDeFabricacao.Size = new Size(92, 23);
             dtAnoDeFabricacao.TabIndex = 24;
             dtAnoDeFabricacao.Value = new DateTime(2023, 12, 12, 0, 0, 0, 0);
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(251, 0);
+            label2.Location = new Point(210, 0);
             label2.Name = "label2";
-            label2.Size = new Size(92, 20);
+            label2.Size = new Size(73, 15);
             label2.TabIndex = 25;
             label2.Text = "Ano modelo";
             // 
@@ -146,125 +150,132 @@
             // 
             dtAnoModelo.CustomFormat = "yyyy";
             dtAnoModelo.Format = DateTimePickerFormat.Custom;
-            dtAnoModelo.Location = new Point(349, 4);
-            dtAnoModelo.Margin = new Padding(3, 4, 3, 4);
+            dtAnoModelo.Location = new Point(289, 3);
             dtAnoModelo.Name = "dtAnoModelo";
             dtAnoModelo.ShowUpDown = true;
-            dtAnoModelo.Size = new Size(97, 27);
+            dtAnoModelo.Size = new Size(85, 23);
             dtAnoModelo.TabIndex = 26;
             dtAnoModelo.Value = new DateTime(2023, 12, 12, 0, 0, 0, 0);
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(452, 0);
+            label3.Location = new Point(380, 0);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(41, 15);
             label3.TabIndex = 27;
             label3.Text = "Chassi";
             // 
             // txtChassi
             // 
-            txtChassi.Location = new Point(508, 4);
-            txtChassi.Margin = new Padding(3, 4, 3, 4);
+            txtChassi.Location = new Point(427, 3);
             txtChassi.MaxLength = 18;
             txtChassi.Name = "txtChassi";
-            txtChassi.Size = new Size(169, 27);
+            txtChassi.Size = new Size(148, 23);
             txtChassi.TabIndex = 28;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(3, 35);
+            label5.Location = new Point(3, 29);
             label5.Name = "label5";
-            label5.Size = new Size(61, 20);
+            label5.Size = new Size(48, 15);
             label5.TabIndex = 29;
             label5.Text = "Modelo";
             // 
             // txtModelo
             // 
-            txtModelo.Location = new Point(70, 39);
-            txtModelo.Margin = new Padding(3, 4, 3, 4);
+            txtModelo.Location = new Point(57, 32);
             txtModelo.MaxLength = 60;
             txtModelo.Name = "txtModelo";
-            txtModelo.Size = new Size(376, 27);
+            txtModelo.Size = new Size(330, 23);
             txtModelo.TabIndex = 30;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(452, 35);
+            label6.Location = new Point(393, 29);
             label6.Name = "label6";
-            label6.Size = new Size(44, 20);
+            label6.Size = new Size(35, 15);
             label6.TabIndex = 31;
             label6.Text = "Placa";
             // 
             // txtPlaca
             // 
-            txtPlaca.Location = new Point(502, 39);
-            txtPlaca.Margin = new Padding(3, 4, 3, 4);
+            txtPlaca.Location = new Point(434, 32);
             txtPlaca.MaxLength = 18;
             txtPlaca.Name = "txtPlaca";
-            txtPlaca.Size = new Size(175, 27);
+            txtPlaca.Size = new Size(154, 23);
             txtPlaca.TabIndex = 32;
+            // 
+            // lbMarca
+            // 
+            lbMarca.AutoSize = true;
+            lbMarca.Location = new Point(3, 58);
+            lbMarca.Name = "lbMarca";
+            lbMarca.Size = new Size(40, 15);
+            lbMarca.TabIndex = 34;
+            lbMarca.Text = "Marca";
+            // 
+            // txtMarca
+            // 
+            txtMarca.Location = new Point(49, 61);
+            txtMarca.MaxLength = 18;
+            txtMarca.Name = "txtMarca";
+            txtMarca.Size = new Size(154, 23);
+            txtMarca.TabIndex = 35;
             // 
             // btnPesquisarVeiculo
             // 
             btnPesquisarVeiculo.Image = Properties.Resources.pesquisa;
             btnPesquisarVeiculo.ImageAlign = ContentAlignment.MiddleRight;
-            btnPesquisarVeiculo.Location = new Point(3, 73);
+            btnPesquisarVeiculo.Location = new Point(209, 60);
+            btnPesquisarVeiculo.Margin = new Padding(3, 2, 3, 2);
             btnPesquisarVeiculo.Name = "btnPesquisarVeiculo";
-            btnPesquisarVeiculo.Size = new Size(131, 43);
+            btnPesquisarVeiculo.Size = new Size(115, 32);
             btnPesquisarVeiculo.TabIndex = 33;
             btnPesquisarVeiculo.Text = "Pesquisar";
             btnPesquisarVeiculo.UseVisualStyleBackColor = true;
+            btnPesquisarVeiculo.Click += btnPesquisarVeiculo_Click;
             // 
-            // imgVeiculo
+            // gridVeiculo
             // 
-            imgVeiculo.Image = Properties.Resources.novo;
-            imgVeiculo.Location = new Point(689, 170);
-            imgVeiculo.Margin = new Padding(3, 4, 3, 4);
-            imgVeiculo.Name = "imgVeiculo";
-            imgVeiculo.Size = new Size(222, 142);
-            imgVeiculo.SizeMode = PictureBoxSizeMode.StretchImage;
-            imgVeiculo.TabIndex = 2;
-            imgVeiculo.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 319);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(914, 281);
-            dataGridView1.TabIndex = 1;
+            gridVeiculo.BackgroundColor = Color.White;
+            gridVeiculo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gridVeiculo.Dock = DockStyle.Fill;
+            gridVeiculo.Location = new Point(0, 239);
+            gridVeiculo.Margin = new Padding(3, 2, 3, 2);
+            gridVeiculo.Name = "gridVeiculo";
+            gridVeiculo.RowHeadersWidth = 51;
+            gridVeiculo.RowTemplate.Height = 29;
+            gridVeiculo.Size = new Size(800, 211);
+            gridVeiculo.TabIndex = 1;
+            gridVeiculo.CellContentDoubleClick += gridVeiculo_CellContentDoubleClick;
             // 
             // frmFiltrarVeiculo
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(914, 600);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(800, 450);
+            Controls.Add(gridVeiculo);
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
+            MaximumSize = new Size(816, 489);
             Name = "frmFiltrarVeiculo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Buscar Veículos";
+            Load += frmFiltrarVeiculo_Load;
             panel1.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)imgVeiculo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridVeiculo).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private DataGridView dataGridView1;
+        private DataGridView gridVeiculo;
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
         private DateTimePicker dtAnoDeFabricacao;
@@ -278,7 +289,8 @@
         private TextBox txtPlaca;
         private Button btnNovoVeiculo;
         private Button btnPesquisarVeiculo;
-        private PictureBox imgVeiculo;
         private Button button1;
+        private Label lbMarca;
+        private TextBox txtMarca;
     }
 }

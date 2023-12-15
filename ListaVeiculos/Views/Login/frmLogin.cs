@@ -1,9 +1,12 @@
-﻿using System.Text;
+﻿using ListaVeiculos.Views.Utils;
+using System.Text;
 
 namespace ListaVeiculos.Views.Views.Login
 {
     public partial class frmLogin : Form
     {
+        private static readonly HttpClient client = new HttpClient();
+
         public frmLogin()
         {
             InitializeComponent();
@@ -11,44 +14,44 @@ namespace ListaVeiculos.Views.Views.Login
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
         }
 
         private async void btnLogar_Click(object sender, EventArgs e)
         {
-            string apiUrl = "https://test-api-y04b.onrender.com/signIn";
-            string username = txtLogin.Text;
-            string password = txtSenha.Text;
-
             btnLogar.Enabled = false;
-            using (HttpClient client = new HttpClient())
+
+            var content = new StringContent($"{{\"user\":\"{txtLogin.Text}\", \"password\":\"{txtSenha.Text}\"}}", Encoding.UTF8, "application/json");
+
+            try
             {
-                var content = new StringContent($"{{\"user\":\"{username}\", \"password\":\"{password}\"}}", Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await client.PostAsync(Url.UrlLogin(), content).ConfigureAwait(false);
 
-                try
+                if (response.IsSuccessStatusCode)
                 {
-                    HttpResponseMessage response = await client.PostAsync(apiUrl, content);
-
-                    if (response.IsSuccessStatusCode)
-                    {
-                        string responseBody = await response.Content.ReadAsStringAsync();
-                        //MessageBox.Show($"Resposta bem-sucedida: {responseBody}"); // mandar para o banco salvar o login 
-                        Dispose();
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Usuário e/ou senha inválido!");
-                        btnLogar.Enabled = true;
-                        txtLogin.Text = string.Empty;
-                        txtSenha.Text = string.Empty;
-                        txtLogin.Focus();
-                    }
+                    string responseBody = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    Dispose();
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show($"Erro: {ex.Message}");
+                    MessageBox.Show("Usuário e/ou senha inválido!");
+                    ResetLoginForm();
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}");
+            }
+            finally
+            {
+                btnLogar.Enabled = true;
+            }
+        }
+
+        private void ResetLoginForm()
+        {
+            txtLogin.Text = string.Empty;
+            txtSenha.Text = string.Empty;
+            txtLogin.Focus();
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
